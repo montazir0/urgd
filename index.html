@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>CURD</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+ <body>
+ <div class="curd">
+   <div class="head">
+     <h2>CRUD</h2>
+     <p>PROPERT MANAGER SYSTEM</p>
+   </div>
+   
+   <div class="inputs" >
+     <input type="text" placeholder="title" id="title">
+     <div class="price">
+       <input onkeyup="getTotal()" type="number" id="price" placeholder="price">
+       <input onkeyup="getTotal()" type="number" id="taxes" placeholder="taxes">
+       <input onkeyup="getTotal()" type="number" id="ads" placeholder="ads">
+       <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
+       <small id="total">Nan</small>
+     </div>
+     <input type="number" id="count" placeholder="count">
+     <input type="text" id="categoty" placeholder="categoty">
+     <button id="submit">create</button>
+   </div>
+   
+   <div class="outputs">
+     <div class="searchBlock">
+       <input onkeyup="searchdata(this.value)" id="search" type="text" placeholder="search">
+       <div class="btnSearch">
+         <button onclick="getsearchmood(this.id)" id="searchTitle">Search By Title</button>
+         <button onclick="getsearchmood(this.id)" id="searchcategoty">Search By Categoty</button>
+       </div>
+     </div>
+     <div id="deleteall">
+     </div>
+     <div id="tyty">
+        
+        <table>
+          <tr>
+           <th>id</th>
+           <th>title</th>
+           <th>price</th>
+           <th>taxes</th>
+           <th>ads</th>
+           <th>discount</th>
+           <th>total</th>
+           <th>categoty</th>
+           <th>update</th>
+           <th>delete</th>
+          </tr>
+          <tbody id="tbody">
+    
+          </tbody>
+       </table>
+     </div>
+   </div>
+ </div>
+ 
+  <script src="main.js"></script>
+</body> 
+</html>
